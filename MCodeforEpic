@@ -1,1 +1,17 @@
+Rules are Patient or Patient Score Context
 
+Patient Context Rules
+HTN = Orders from Medication Grouper or Current Medications in Grouper. ERX General Antihypertensives contains most of the HTN Classes in the PREVENT Study
+
+STN = Orders from Medication Grouper or Current Medications in Grouper. ERX General Statins contains the Statins the PREVENT Study
+
+DM = HbA1c > 6.5 or Dx in Medical Hx or Problem List I chose the diagnosis groupers V28 due to recent RAF changes
+  The M code has binary switches which allow the end user to toggle this selection on off if the search is inaccurate
+
+BP = Property Last Systolic blood pressure (flowsheet gets do not work well for BP due to SBP/DBP, CER rule is easier)
+  Return Message has BP and use sb=$$getMessage^S2LPP3(Your Cer Rule,,0,ID,DAT) to return error message into flowsheet
+
+SM = Property Patient Current Smoking Status ID 50084
+
+Sex = patient score rules and utilize property Reliably Determinable Patient Sex
+    Prevent uses biologic sex and not legal sex. recommend utilizing this as well due to the vast impact of biologic sex on risk evaluation
