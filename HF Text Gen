@@ -1,27 +1,27 @@
 M:x
 p={15817;;0}
-hx1=+$$getMessage^S2LPP3(835306,,0,ID,DAT)
+hx1=+$$getMessage^S2LPP3(835306,,0,patID,patDAT)
 hx1=$s(hx1=1:0,1:1)
 hxc={15832;;3}
 hx=$s(hxc=1:0,hxc=0:1,1:hx1)
 hxs=$s(hx=0:" History of ASCVD ",1:" No history of ASCVD, ")
 age=$$Age^LBDFLSH(""0;0;0"",""-"",patID)
 gf={15855;;0}
-sb=+$$getMessage^S2LPP3(835298,,0,ID,DAT)
-bm=$$getMessage^S2LPP3(835297,,0,ID,DAT)
-dm1=+$$evalRule^elibHULIB22(835302,ID,DAT)
+sb=+$$getMessage^S2LPP3(835298,,0,patID,patDAT)
+bm=$$getMessage^S2LPP3(835297,,0,patID,patDAT)
+dm1=+$$evalRule^elibHULIB22(835302,patID,patDAT)
 dmc={15816;;3}
 dm=$s(dmc=1:1,dmc=0:0,1:dm1)
 dms=$s(dm=1:"Hx of DM, ",1:"No Hx of DM, ")
-sm1=+$$evalRule^elibHULIB22(835309,ID,DAT)
+sm1=+$$evalRule^elibHULIB22(835309,patID,patDAT)
 smc={15841;;3}
 sm=$s(smc=1:1,smc=0:0,1:sm1)
 sms=$s(sm=1:"Current Smoker, ",1:"Not a smoker, ")
-sex1=+$$evalRule^elibHULIB22(835421,ID,DAT)
+sex1=+$$evalRule^elibHULIB22(835421,patID,patDAT)
 sexc={15815;;4}
 sex=$s(sexc=1:1,sexc=2:0,sexc=3:3,1:sex1)
 sexs=$s(sex=1:"Female, ",sex=0:"Male, ",1:" Sex-Logic ")
-htn=+$$evalRule^elibHULIB22(835299,ID,DAT)
+htn=+$$evalRule^elibHULIB22(835299,patID,patDAT)
 htns=$s(htn=1:"HTN Rx, ",1:"No HTN Rx, ")
 age2=$s((age>=30)&(age<=79):age,1:0)
 sb2=$s((sb>=90)&(sb<=200):sb,1:0)
