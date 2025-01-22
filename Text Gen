@@ -5,9 +5,9 @@ hx1=$s(hx1=1:0,1:1)
 hxc={15832;;3}
 hx=$s(hxc=1:0,hxc=0:1,1:hx1)
 hxs=$s(hx=0:" History of ASCVD ",1:" No history of ASCVD, ")
-age=+$$getMessage^S2LPP3(835308,,0,ID,DAT)
-tc=$$abs^%Zelibm(+$$lastResultsFrComp^LRESULT("CHOL",1,1,ID))
-hd=$$abs^%Zelibm(+$$lastResultsFrComp^LRESULT("HDL",1,1,ID))
+age=$$Age^LBDFLSH(""0;0;0"",""-"",patID)
+tc=$$abs^%Zelibm(+$$lastResultsFrComp^LRESULT("CHOL",1,1,patID))
+hd=$$abs^%Zelibm(+$$lastResultsFrComp^LRESULT("HDL",1,1,patID))
 gf={15855;;0}
 sb=+$$getMessage^S2LPP3(835298,,0,ID,DAT)
 dm1=+$$evalRule^elibHULIB22(835302,ID,DAT)
