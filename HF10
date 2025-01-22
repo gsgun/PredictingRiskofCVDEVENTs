@@ -14,7 +14,7 @@ dm=$s(dmc=1:1,dmc=0:0,1:dm1)
 sm1=+$$evalRule^elibHULIB22(835309,ID,DAT)
 smc={15841;;3}
 sm=$s(smc=1:1,smc=0:0,1:sm1)
-sex1=+$$evalRule^elibHULIB22(835189,ID,DAT)
+sex1=+$$evalRule^elibHULIB22(835421,ID,DAT)
 sexc={15815;;4}
 sex=$s(sexc=1:1,sexc=2:0,sexc=3:3,1:sex1)
 bm=$$getMessage^S2LPP3(835297,,0,ID,DAT)
