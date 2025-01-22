@@ -2,10 +2,10 @@ M:x
 p={15817;;0}
 htn=+$$evalRule^elibHULIB22(835299,ID,DAT)
 stn=+$$evalRule^elibHULIB22(835300,ID,DAT)
-age=+$$getMessage^S2LPP3(835308,,0,ID,DAT)
+age=$$Age^LBDFLSH(""0;0;0"",""-"",patID)
 sb=+$$getMessage^S2LPP3(835298,,0,ID,DAT)
-tc=$$abs^%Zelibm(+$$lastResultsFrComp^LRESULT("CHOL",1,1,ID))
-hd=$$abs^%Zelibm(+$$lastResultsFrComp^LRESULT("HDL",1,1,ID))
+tc=$$abs^%Zelibm(+$$lastResultsFrComp^LRESULT("CHOL",1,1,patID))
+hd=$$abs^%Zelibm(+$$lastResultsFrComp^LRESULT("HDL",1,1,patID))
 dm1=+$$evalRule^elibHULIB22(835302,ID,DAT)
 dmc={15816;;3}
 dm=$s(dmc=1:1,dmc=0:0,1:dm1)
