@@ -1,5 +1,7 @@
 M:x
 p={15817;;0}
+a=patID
+b=patDAT
 hx1=+$$getMessage^S2LPP3(835306,,0,patID,patDAT)
 hx1=$s(hx1=1:0,1:1)
 hxc={15832;;3}
