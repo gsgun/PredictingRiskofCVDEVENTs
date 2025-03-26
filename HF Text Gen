@@ -2,32 +2,32 @@ M:x
 p={15817;;0}
 a=patID
 b=patDAT
-hx1=+$$getMessage^S2LPP3(835306,,0,patID,patDAT)
+hx1=+$$getMessage^S2LPP3(835306,,0,a,b)
 hx1=$s(hx1=1:0,1:1)
 hxc={15832;;3}
 hx=$s(hxc=1:0,hxc=0:1,1:hx1)
 hxs=$s(hx=0:" History of ASCVD ",1:" No history of ASCVD, ")
-age=$$Age^LBDFLSH(""0;0;0"",""-"",patID)
+age=$$Age^LBDFLSH(""0;0;0"",""-"",a)
 gf={15855;;0}
-sb=+$$getMessage^S2LPP3(835298,,0,patID,patDAT)
-bm=$$getMessage^S2LPP3(835297,,0,patID,patDAT)
-dm1=+$$evalRule^elibHULIB22(835302,patID,patDAT)
+sb=+$$getMessage^S2LPP3(835298,,0,a,b)
+bm=$$getMessage^S2LPP3(835297,,0,a,b)
+dm1=+$$evalRule^elibHULIB22(835302,a,b)
 dmc={15816;;3}
 dm=$s(dmc=1:1,dmc=0:0,1:dm1)
 dms=$s(dm=1:"Hx of DM, ",1:"No Hx of DM, ")
-sm1=+$$evalRule^elibHULIB22(835309,patID,patDAT)
+sm1=+$$evalRule^elibHULIB22(835309,a,b)
 smc={15841;;3}
 sm=$s(smc=1:1,smc=0:0,1:sm1)
 sms=$s(sm=1:"Current Smoker, ",1:"Not a smoker, ")
-sex1=+$$evalRule^elibHULIB22(835421,patID,patDAT)
+sex1=+$$evalRule^elibHULIB22(835421,a,b)
 sexc={15815;;4}
 sex=$s(sexc=1:1,sexc=2:0,sexc=3:3,1:sex1)
 sexs=$s(sex=1:"Female, ",sex=0:"Male, ",1:" Sex-Logic ")
-htn=+$$evalRule^elibHULIB22(835299,patID,patDAT)
+htn=+$$evalRule^elibHULIB22(835299,a,b)
 htns=$s(htn=1:"HTN Rx, ",1:"No HTN Rx, ")
 age2=$s((age>=30)&(age<=79):age,1:0)
 sb2=$s((sb>=90)&(sb<=200):sb,1:0)
 gf2=$s((gf>=15)&(gf<=150):gf,1:0)
 bm2=$s((bm>=18.5)&(bm<40):bm,1:0)
 hf10={15834;;0}
-x=$s(hf10=0:"Does not meet criteria due to:"_$s(hx=0:" History of ASCVD ",1:$c(5))_$s(sex=3:" Sex ",1:$c(5))_$s(age2=0:" Age "_age,1:$c(5))_$s(sb2=0:" SBP: "_sb,1:$c(5))_$s((gf2=0)&(sex'=3):" EGFR "_gf,1:$c(5))_$s(bm2=0:" BMI "_bm,1:$c(5)),1:hf10_"%"_hxs_dms_sms_sexs_htns_"Age: "_age2_", SBP: "_sb2_", EGFR: "_gf2_", BMI: "_bm2)
+x=$s(hf10=0:"Does not meet criteria due to:"_$s(hx=0:" History of ASCVD ",1:$c(5))_$s(sex=3:" Sex ",1:$c(5))_$s(age2=0:" Age "_age,1:$c(5))_$s(sb2=0:" SBP: "_sb,1:$c(5))_$s((gf2=0)&(sex'=3):" eGFR "_gf,1:$c(5))_$s(bm2=0:" BMI "_bm,1:$c(5)),1:hf10_"%"_hxs_dms_sms_sexs_htns_"Age: "_age2_", SBP: "_sb2_", eGFR: "_gf2_", BMI: "_bm2)
