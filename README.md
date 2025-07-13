@@ -1,32 +1,15 @@
 ---
-description: Nomenclature
+description: >-
+  Reference: XGM25 "Enhancing Patient Safety with Improved Admissions Medication
+  Reconciliation [PAC15]"
 ---
 
 # Admission Med Rec
 
-Prefix for CER ETX
+Issue: Changes to Admission Navigator consolidated PTA Medications and Prior to Admission Orders. Both need to be complete for Epic standard build to show Admission Navigator Complete
 
-CER Rules
+Goal: Determine steps for Admission Medication Review, Reconciliation, and Records Involved
 
-IP ED Admission Med Rec
+Deployed: 7/8
 
-1. Parent                                                                     836408
-2. PTA Unrec                                                              836344&#x20;
-3. Review Not Done                                                  836363
-4. Review Done + PTA Meds                                  836339  &#x20;
-5. Review - Pharmacist Complete                        836362&#x20;
-6. Review - Pharmacy Tech Complete                 836361
-7. Review - RN Complete                                        836339
-
-
-
-ETX
-
-PH IP ED ADMISSION MED REC
-
-1. Parent                                                                   24604
-2. Review Status - TIP                                           24605
-3. Unrec Meds - TIP                                               24606  &#x20;
-
-
-
+Follow-up:?
