@@ -23,8 +23,8 @@ ETX
 PH IP ED ADMISSION MED REC
 
 1. Parent                                                                   24604
-2. Review Status - TIP                                           24605
-3. Unrec Meds - TIP                                               24606  &#x20;
+2. [Review Status - TIP](etx/)                                           24605
+3. [Unrec Meds - TIP](etx/)                                               24606  &#x20;
 
 
 

@@ -1,8 +1,14 @@
 ---
-description: Build Design
+description: Design Language
 ---
 
-# Admission Med Rec Tip Text
+# Build Design
+
+Build: Integrate into Standard Notes as Tip Texts
+
+* Limitations: Tip Texts are not dynamic and triggered by static events
+
+
 
 Design Language
 
@@ -19,10 +25,8 @@ Design Language
       * Parent ETX - PH IP ED ADMISSION MED REC - PARENT \[24604]
       * CER - IP ED Admission Med Rec Parent \[836408]
         * @CERMSGREFRESH(836363:24605;836344:24606,1,,1)@ //First Line True
-          * Output Text - PH IP ED ADMISSION MED REC - REVIEW STATUS - TIP \[24605]
+          * Output Text - PH IP ED ADMISSION MED REC - REVIEW STATUS - TIP \[[24605](etx/)]
           * CER - Rule: IP ED Admission Med Rec Review Not Done \[836363]
-          * Output Text - PH IP ED ADMISSION MED REC - UNREC MEDS - TIP \[24606]
+          * Output Text - PH IP ED ADMISSION MED REC - UNREC MEDS - TIP \[[24606](etx/)]
           * CER - Rule: IP ED Admission Med Rec PTA Unrec \[836344]
-
-
 
