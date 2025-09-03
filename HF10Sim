@@ -5,9 +5,7 @@ b=patDAT
 htn=+$$evalRule^elibHULIB22(835299,a,b)
 gf={15855;;0}
 age=+$$zCalcAge^%Zefnlii(+$h,$$getn^elibEAnLIB(""EPT"",a,1,""100;1""))
-s1=+$$getMessage^S2LPP3(835298,,0,a,b)
-sc1=$$sumMultSelect^JCUSTFORM1({15890;;0})
-sb=$s(sc1>0:sc1,1:s1)
+sb=+$$getMessage^S2LPP3(835298,,0,a,b)
 hx1=+$$getMessage^S2LPP3(835306,,0,a,b)
 hx1=$s(hx1=1:0,1:1)
 hxc={15832;;3}
